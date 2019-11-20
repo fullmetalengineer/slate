@@ -23,9 +23,7 @@ We have language bindings in Shell (using curl requests) and Ruby code! You can 
 
 # General Information
 
-The API base url is `https://hodlit.herokuapp.com`.
-
-The API is structured into versions. For now, there is only `/api/v1/`.
+The API base url is `https://hodlit.herokuapp.com`. The API is structured into versions. For now, there is only `/api/v1/`.
 
 For example, the URL to login using the above base url and api structure would be `https://hodlit.herokuapp.com/api/v1/users/login`.
 
