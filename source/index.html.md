@@ -58,6 +58,63 @@ You must replace <code>tokentokentoken</code> with the user's access token.
 
 `api/v1/users/login` and `api/v1/users/signup` are the only two endpoints that do not require an Authorization header with the associated token.
 
+# Users
+
+## Signup
+
+```ruby
+TBD
+```
+
+```shell
+curl -X "POST" "https://hodlit.herokuapp.com/api/v1/users/signup" \
+     -H 'Content-Type: application/json; charset=utf-8' \
+     -d $'{
+  "email": "my_user@gmail.com",
+  "phone": "5738675309",
+  "password": "MySuperSecurePassword",
+  "password_confirmation": "MySuperSecurePassword"
+}'
+
+```
+
+> The above command returns JSON structured somewhat like this:
+
+```json
+{
+  "id": 2,
+  "first_name": null,
+  "last_name": null,
+  "token": "55781790684dc700742bb278056f33a0a00c9f2b",
+  "email": "my_user@gmail.com",
+  "phone": "5738675309",
+  "address_line_1": null,
+  "address_line_2": null,
+  "city": null,
+  "state": null,
+  "zip_code": null,
+  "accepted_round_up": null,
+  "accepted_crypto_liability": null,
+  "accepted_terms": null,
+  "accepted_fees": null
+}
+```
+
+This endpoint signs the user up for the service and logs them in (notice the filled-out token). Note that if the signup fails for any reason, the user will not have been created nor will they be logged into Hodlit.
+
+### HTTP Request
+
+`POST https://hodlit.herokuapp.com/api/v1/users/signup`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+email | | Must be a valid email and unique within Hodlit.
+phone | | Must be a valid phone number (no formatting, numbers only) and unique within Hodlit.
+password | |
+password_confirmation | | Password confirmation must match the password
+
 # Kittens
 
 ## Get All Kittens
