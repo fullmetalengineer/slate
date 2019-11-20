@@ -6,8 +6,8 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - ruby
 
 toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
-  - <a href='https://github.com/lord/slate'>Documentation Powered by Slate</a>
+  #- <a href='#'>Sign Up for a Developer Key</a>
+  #- <a href='https://github.com/lord/slate'>Documentation Powered by Slate</a>
 
 includes:
   - errors
@@ -32,7 +32,7 @@ For example, the URL to login using the above base url and api structure would b
 
 # Authentication
 
-> To authorize, use this code:
+> The Authorization scheme requires a header like this:
 
 ```ruby
 TBD
